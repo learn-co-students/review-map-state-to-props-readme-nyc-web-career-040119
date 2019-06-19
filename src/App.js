@@ -34,7 +34,8 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
+  // debugger;
+  // return { orangePeel: ['a', 'b', 'c'] }
   return { items: state.items }
 }
 
