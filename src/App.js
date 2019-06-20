@@ -18,12 +18,12 @@ class App extends Component {
   }
 
   render() {
-    // debugger;
+    debugger;
     return (
       <div className="App">
           <button onClick={() => this.handleOnClickItems()}>
             Click to change items count
-            </button>
+          </button>
           <button onClick={() => this.handleOnClickUsers()}>
             Click to change user count
           </button>
@@ -34,8 +34,24 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
-  return { items: state.items }
+  // debugger
+ return { items: state.items }
 }
 
 export default connect(mapStateToProps)(App);
+
+// #1
+// const vanilla = (milkshake) => {
+//   debugger;
+//   return { items: milkshake.items }
+// }
+//
+// export default connect( state => ({ items: state.items }))(App);
+
+
+// #2
+// const mapStateToProps = (state) => {
+//   return { beef: ['a', 'b', 'c'] }
+// }
+//
+// export default connect(mapStateToProps)(App);
