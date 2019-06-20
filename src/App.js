@@ -33,9 +33,28 @@ class App extends Component {
   }
 }
 
+
 const mapStateToProps = (state) => {
   debugger;
   return { items: state.items }
 }
 
 export default connect(mapStateToProps)(App);
+
+//we can change the names here and not have it effect functionality
+
+// const vanilla = (milkshake) => {
+//   debugger;
+//   return { items: milkshake.items }
+// }
+//
+// export default connect(vanilla)(App);
+
+//we can even shorten mapStateToProps() down to an anonymous arrow function and pass it directly to connect()
+// export default connect(state => ({ items: state.items}))(App)
+
+//we can change the key of the return as well
+
+//const mapStateToProps = (state) => {
+  //return {orangePeel: ['a', 'b', 'c']}
+//}
